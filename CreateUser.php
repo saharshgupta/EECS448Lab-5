@@ -8,9 +8,6 @@ $user = $_POST["user_id"];
 $query = "INSERT INTO Users (user_id) VALUES('" . $user . "')";
 if($result = $mysqli->query($query)){
 	echo "Added User: $user";
-	while ($row = $result->fetch_assoc()){
-		//echo "Added User: " . $row["user_id"];
-	}
 	$result->free();
 }
 else{
