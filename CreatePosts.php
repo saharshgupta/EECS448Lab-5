@@ -12,11 +12,8 @@ if($post == ""){
 else{
 $query = "INSERT INTO Posts (content,author_id) VALUES('$post','$user')";
 if($result = $mysqli->query($query)){
-	echo "Added User: $user";
-	echo "Added Content: $post";
-	while ($row = $result->fetch_assoc()){
-		//echo "Added User: " . $row["user_id"];
-	}
+	echo "For User: $user <br>";
+	echo "Added Content: $post <br>";
 	$result->free();
 }
 else{

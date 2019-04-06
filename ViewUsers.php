@@ -6,10 +6,11 @@ if($mysqli->connect_errno){
 }
 $query = "SELECT * FROM Users";
 if($result = $mysqli->query($query)){
-	echo "Users: <br>";
+	echo "<table style='border-style: groove'> <tr style='border-style: groove'> <th style='border-style: groove'> Users </th> </tr> <br>";
 	while ($row = $result->fetch_assoc()){
-		echo $row[user_id] . "<br>";
+		echo "<tr style='border-style: groove'> <td style='border-style: groove'>$row[user_id] </td></tr>";
 	}
+	echo "</table>";
 	$result->free();
 }
 else{
